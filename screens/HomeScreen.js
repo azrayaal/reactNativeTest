@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native'
-import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet, Text, View, SafeAreaView, TextInput, Pressable, ScrollView } from 'react-native'
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
 import CharacterTypes from '../components/CharacterTypes';
+import RegiontTypes from '../components/RegoinTypes';
+import Elements from '../components/Elements';
 
 
 const HomeScreen = () => {
     return(
-        <SafeAreaView>
+        <ScrollView >
             {/* Search Bar */}
             <View style={{
                 flexDirection: 'row', 
@@ -20,7 +22,7 @@ const HomeScreen = () => {
                 marginTop: 50,
                 padding: 10,
                 borderColor: '#C0C0C0',
-                borderRadius:  7
+                borderRadius:  7,
                 }}>
                 <TextInput style={{
                     fontSize: 17
@@ -32,7 +34,32 @@ const HomeScreen = () => {
             <Carousel/>
             {/* Character Types */}
             <CharacterTypes/>
-        </SafeAreaView>
+             {/* Regions Types */}
+             <RegiontTypes/>
+            {/* Filter Button */}
+            <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around', marginVertical:15}}>
+                <Pressable style={{marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#D0D0D0', padding:10, borderRadius:20, justifyContent:'center'}}>
+                    <Text>
+                        Filter
+                        <Ionicons name="filter" size={24} color="black" />
+                    </Text>
+                </Pressable>
+
+                <Pressable style={{marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#D0D0D0', padding:10, borderRadius:20, justifyContent:'center'}}>
+                    <Text>
+                        Sort by Name
+                    </Text>
+                </Pressable>
+
+                <Pressable style={{marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#D0D0D0', padding:10, borderRadius:20, justifyContent:'center'}}>
+                    <Text>
+                       Sort by region
+                    </Text>
+                </Pressable>
+            </View>
+             {/* Element Types */}
+            <Elements/>
+        </ScrollView>
     )   
 }
 
