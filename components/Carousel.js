@@ -4,10 +4,10 @@ import { SliderBox } from 'react-native-image-slider-box'
 
 const Carousel = () => {
     const images = [
-        require('../assets/albedo-banner.png'), 
-        require('../assets/alhaitham-banner.png'), 
-        require('../assets/hu-tao-banner.png'), 
-        require('../assets/kaedehara-kazuha-banner.png'), 
+        require('../assets/img/bg_slider/albedo-banner.png'), 
+        require('../assets/img/bg_slider/alhaitham-banner.png'), 
+        require('../assets/img/bg_slider/hu-tao-banner.png'), 
+        require('../assets/img/bg_slider/kaedehara-kazuha-banner.png'), 
     ];
 
   return (

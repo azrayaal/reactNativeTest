@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
+import CharacterTypes from '../components/CharacterTypes';
 
 
 const HomeScreen = () => {
@@ -29,6 +30,8 @@ const HomeScreen = () => {
             </View>
             {/* IMAGE SLIDER */}
             <Carousel/>
+            {/* Character Types */}
+            <CharacterTypes/>
         </SafeAreaView>
     )   
 }
